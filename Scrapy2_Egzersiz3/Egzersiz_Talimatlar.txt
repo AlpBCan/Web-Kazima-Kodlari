@@ -1,0 +1,32 @@
+SIRA SİZDE!
+
+Lütfen önce kendiniz çözmeye çalışın. Takıldığınız bir yer olursa çözüm videosundan sadece o kısma bakıp kendi kodunuza devam edin.
+
+
+-quotes isimli bir proje oluşturun
+
+-terminali kullanarak proje klasörünün içine girin
+
+-quotes.toscrape.com için quotespider isimli bir spider oluşturun
+
+-items.py dosyasını açın, orada bir QuoteItem oluşturun. field'ları: quote, author, tags. Sonrasında bu item'ı spider dosyasında import edin.
+
+-Gerekli verileri almak için parse fonksiyonunu oluşturun (Programınız starturls sayesinde 1. sayfadan kendiliğinden başlamalı) :
+
+    -İlk sayfadaki quote'ların listesini oluşturun
+    
+    -Bu liste içinde bir loop başlatın
+    
+            -Her döngüde OuoteItem'ın bir instance'ını oluşturun
+    
+            -Sayfadaki her quote'un metnini(sözün kendisini), yazarını ve etiketlerini kazıyın.
+            (etiketleri tek bir string haline getirecek bir mantık geliştirin)
+            İPUCU: ', '.join(tag_list) 
+    
+            -Elde edilen verileri QuoteItem içine yerleştirin ve item'ı yield edin
+    
+    -Sonraki sayfanın olup olmadığını kontrol edin
+    
+    -Varsa sonraki sayfaya response.follow ile bir request yapın, yukarıdaki işlemleri tekrarlamak için bir callback fonksiyonu kullanın.
+
+-Spider'ınızı terminalden çalıştırın, bunu yaparken elde elilen veriyi json olarak kaydetmek için bir ifade kullanın

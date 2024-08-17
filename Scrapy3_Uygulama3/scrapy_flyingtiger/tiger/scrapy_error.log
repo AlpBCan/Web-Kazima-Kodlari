@@ -1,0 +1,32 @@
+2024-08-10 16:07:21 [scrapy.core.scraper] ERROR: Spider error processing <GET https://flyingtiger.com/products/blue-and-white-glass-bead-set-3032536> (referer: https://flyingtiger.com/collections/shop-all?page=55)
+Traceback (most recent call last):
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\utils\defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\utils\python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\utils\python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\tiger\tiger\spiders\product.py", line 31, in parse_items
+    tiger_item['image_url'] = 'https:' + response.css('div.product__media img').attrib['src'].split('?')[0]
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'src'

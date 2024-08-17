@@ -1,0 +1,10 @@
+2024-08-10 18:57:04 [scrapy.pipelines.media] ERROR: [Failure instance: Traceback: <class 'scrapy.pipelines.files.FileException'>: 
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\twisted\internet\defer.py:536:addCallbacks
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\twisted\internet\defer.py:1078:_runCallbacks
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\pipelines\media.py:197:_check_media_to_download
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\twisted\internet\defer.py:536:addCallbacks
+--- <exception caught here> ---
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\twisted\internet\defer.py:1078:_runCallbacks
+C:\Content\Web_Scraping_Turkish\scrapy_flyingtiger\.venv\Lib\site-packages\scrapy\pipelines\files.py:459:media_failed
+]
+NoneType: None
